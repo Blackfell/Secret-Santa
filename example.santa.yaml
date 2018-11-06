@@ -11,7 +11,7 @@ participant_data:
         Eve : eve@domain.local
 
 """
-Blaklisted matches are for use where couples, housemates, etc. should avoid 
+Blacklisted matches are for use where couples, housemates, etc. should avoid 
 being matched. This is a nested set of lists, so maintain the formatting you 
 see below, where Alice and Bob may not be matched, likewise, Dawn and Bob is
 a disallowed match.
