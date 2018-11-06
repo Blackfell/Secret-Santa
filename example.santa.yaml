@@ -1,0 +1,49 @@
+"""
+HO HO HO!
+This file sets out the user configuration, destination email addresses to use, and the settings
+for your SMTP server.
+"""
+participant_data:
+        Alice : alice@domain.local
+        Bob : bob@domain.local
+        Charlie : charlie@domain.local
+        Dawn : dawn@domain.local
+        Eve : eve@domain.local
+
+"""
+Blaklisted matches are for use where couples, housemates, etc. should avoid 
+being matched. This is a nested set of lists, so maintain the formatting you 
+see below, where Alice and Bob may not be matched, likewise, Dawn and Bob is
+a disallowed match.
+"""
+blacklist:
+        - - Alice
+          - Bob
+        - - Dawn
+          - Bob
+
+"""
+These settings are those required to log into your SMTP server. The loopy variable is 
+obscurely named deliberately, to avoid scraping. Fill in the content as you see fit,
+but any changes to the text enclosed in the curly braces.
+"""
+email:
+        sender: sender@domain.local
+        loopy : yourpassword
+        server : smtp.domain.local
+        port : 465
+        subject : "Your secret santa is here!"
+        body : "Dear {giver},
+
+                You've been selected to give a gift to {reciever}!
+
+                remember you can spend up to {price_limit} pounds but not a penny more!
+
+                Merry Christmas,
+                
+                Santa.
+                
+                You are not subscribed to this service, but would be able to unsubscribe at any time if you were."
+                
+price_limit:
+        10
