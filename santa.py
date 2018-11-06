@@ -187,11 +187,7 @@ def main(argv):
             for person in santas_list:
                 print('    [M]{} - {}'.format(person.name, person.match))
         if send == False:
-            print("""[!]Pairing Complete!\nYou can send these pairings out by calling the script with the send options.
-
-{}
-
-Have a nice day!""".format(usage))
+            print("""[!]Pairing Complete!\nYou can send these pairings out by calling the script with the send options.\n\n   {}\n\nHave a nice day!""".format(usage))
         else:
             if verbose == True:
                 print('[!]Sending emails.')
